@@ -1,0 +1,77 @@
+name: Archive the current portfolio
+on:
+  push:
+    branches: [main]
+    paths: [".github/workflows/archive-portfolio.yml"]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: archive-portfolio
+jobs:
+  snapshot:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Save and verify the published files
+        if: ${{ hashFiles('docs/index.html') == '' }}
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from concurrent.futures import ThreadPoolExecutor
+          from pathlib import Path
+          from urllib.parse import urljoin
+          from urllib.request import Request, urlopen
+          import re
+          
+          ORIGIN = "https://dmitriy-structural-portfolio.dmitriy206418.chatgpt.site/"
+          DEST = Path("docs")
+          HEADER = {"User-Agent": "Mozilla/5.0 (Portfolio migration)"}
+          ASSET = re.compile(r"(?<![\w/])(?:\./|/)?(assets/[A-Za-z0-9_.-]+\.(?:png|pdf))\b")
+          
+          def download(path):
+              request = Request(urljoin(ORIGIN, path), headers=HEADER)
+              with urlopen(request, timeout=30) as response:
+                  return response.read()
+          
+          html = download("")
+          source = html.decode("utf-8")
+          required = (
+              "Senior Structural Engineer", "25-storey residential complex",
+              "37 m roof", "Residential design in a seismic region",
+              "Railway station &amp; three concourses",
+              "Residential quarter &amp; underground parking",
+          )
+          normalized = source.replace("&amp;", "&")
+          for label in required:
+              if label.replace("&amp;", "&") not in normalized:
+                  raise RuntimeError(f"Missing published project or title: {label}")
+          
+          paths = sorted(set(ASSET.findall(source)))
+          for document in ("assets/cv.pdf", "assets/portfolio.pdf"):
+              if document not in paths:
+                  raise RuntimeError(f"Missing PDF link: {document}")
+          if sum(path.endswith(".png") for path in paths) < 56:
+              raise RuntimeError("The image gallery inventory is incomplete.")
+          if re.search(r"""['"]/assets/""", source):
+              raise RuntimeError("Asset paths must be relative to the repository site.")
+          
+          def save_asset(path):
+              data = download(path)
+              expected = b"%PDF-" if path.endswith(".pdf") else b"\x89PNG\r\n\x1a\n"
+              if not data.startswith(expected):
+                  raise RuntimeError(f"Invalid file from published site: {path}")
+              (DEST / path).write_bytes(data)
+          
+          (DEST / "assets").mkdir(parents=True, exist_ok=True)
+          with ThreadPoolExecutor(max_workers=6) as executor:
+              list(executor.map(save_asset, paths))
+          (DEST / "index.html").write_bytes(html)
+          (DEST / ".nojekyll").touch()
+          print(f"Verified the home page and {len(paths)} linked assets.")
+          PY
+          git add -- docs
+          git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Archive the original portfolio and assets'
+          git push origin HEAD:main
