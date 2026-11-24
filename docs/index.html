@@ -1,44 +1,840 @@
 <!doctype html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Dmitriy Ivanov - Structural Engineer. Reinforced concrete, long-span steel, FEM analysis and BIM. Explore five selected projects."><title>Dmitriy Ivanov - Structural Engineer</title>
-<style>
-:root{--paper:#fff;--ink:#171d19;--muted:#626c65;--line:#d9dfda;--accent:#075525}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:80px}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.65 Arial,Helvetica,sans-serif}a{color:inherit;text-decoration:none}button{font:inherit;cursor:pointer}a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:5px}header{position:sticky;top:0;z-index:5;background:#fffffff5;display:flex;justify-content:space-between;align-items:center;padding:20px 4vw;border-bottom:1px solid #eef1ee;gap:20px}.brand{font-size:15px;font-weight:700}.brand span{color:var(--accent)}nav{display:flex;gap:28px;font-size:12px}.availability{font:10px monospace;color:var(--muted);letter-spacing:1px}.availability:before{content:'';display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--accent);margin-right:8px}.hero{padding:20px 4vw 0}.hero:before{content:'PORTFOLIO';display:block;font-size:clamp(70px,14.5vw,230px);line-height:1.1;letter-spacing:-.065em;font-weight:400;color:var(--accent);margin-bottom:40px}.hero>.eyebrow{display:none}.hero-layout{display:grid;grid-template-columns:1.15fr 1fr;gap:5vw;align-items:center}.hero-top{grid-column:2;grid-row:1}.hero-art{grid-column:1;grid-row:1;position:relative;padding:30px 0;background:#fff;min-width:0}.hero-model{width:100%;height:390px;object-fit:contain;display:block}.art-label,.art-note{position:absolute;font:9px monospace;color:var(--muted);letter-spacing:1px}.art-label{top:5px;left:0}.art-note{bottom:5px;right:0}h1{font-size:clamp(36px,4.3vw,70px);line-height:1.06;font-weight:400;letter-spacing:-2.5px;margin:0 0 26px}h1 em{font:inherit}.intro p{font-size:15px;line-height:1.9;max-width:490px;color:var(--muted)}.link{display:inline-block;font-size:12px;border-bottom:1px solid var(--ink);padding:12px 0;margin-top:8px}.link span{margin-left:25px}.hero-bottom{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:26px 0;margin-top:30px;font:10px monospace;letter-spacing:1px;color:var(--muted)}section{padding:80px 4vw}.section-label{font:10px monospace;letter-spacing:2px;color:var(--muted);text-transform:uppercase}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin:20px 0 35px}h2{font-size:clamp(34px,4.4vw,68px);line-height:1.08;letter-spacing:-2px;font-weight:400;text-transform:uppercase;margin:0}.section-head p{max-width:350px;font-size:14px;color:var(--muted);margin:0}.filters{display:flex;flex-wrap:wrap;gap:12px;margin:30px 0}.filters button{background:white;border:0;border-bottom:1px solid var(--line);padding:10px 14px;font-size:12px}.filters button.active{color:var(--accent);border-color:var(--accent)}.project{border-top:1px solid var(--line)}.project:last-child{border-bottom:1px solid var(--line)}.project[hidden]{display:none}.project summary{list-style:none;display:grid;grid-template-columns:45px 1fr 180px 24px;gap:20px;align-items:center;cursor:pointer;padding:26px 0}.project summary::-webkit-details-marker,.career-item summary::-webkit-details-marker{display:none}.num{font:12px monospace;color:var(--accent)}h3{font-size:clamp(22px,2.6vw,36px);font-weight:400;line-height:1.3;letter-spacing:-.8px;margin:0}.project small{font-size:11px;color:var(--muted)}.plus{font-size:25px}.project[open] .plus{transform:rotate(45deg)}.project-content{display:grid;grid-template-columns:1fr 1fr;gap:35px;padding:15px 0 45px}.project-content h4{font:11px monospace;letter-spacing:1px;margin:0 0 12px;text-transform:uppercase}.project-content p{font-size:15px;color:var(--muted);margin-top:0}.facts{display:flex;gap:8px;flex-wrap:wrap;margin:25px 0}.facts span{border:1px solid var(--line);padding:7px 10px;font:11px monospace}.source-link{font:10px monospace;color:var(--accent)}.gallery{grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 24px;margin-top:20px}.gallery-note{grid-column:1/-1;font:11px monospace;color:var(--muted);margin:0}.gallery figure{margin:0;min-width:0}.gallery button{display:block;width:100%;height:clamp(340px,34vw,560px);padding:12px;background:#fff;border:1px solid #edf0ed;cursor:zoom-in}.gallery button:hover{border-color:#9cae9e}.gallery img{width:100%;height:100%;object-fit:contain;display:block}.gallery figcaption{font-size:12px;color:var(--muted);padding:12px 0}.about{background:white;border-block:1px solid var(--line);display:grid;grid-template-columns:1fr 1.4fr;gap:9vw}.about h2{margin-top:22px}.about-copy>p{font-size:23px;line-height:1.6;margin-top:0}.about-copy>p:nth-child(2){font-size:15px!important;color:var(--muted)!important}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;border-top:1px solid var(--line);padding-top:25px;margin-top:40px}.stats b{font-size:44px;font-weight:400;display:block}.stats span{font:10px monospace;color:var(--muted)}.expertise{display:grid;grid-template-columns:repeat(3,1fr);gap:35px;margin-top:45px}.expertise article{border-top:1px solid var(--line);padding-top:20px}.expertise h3{font-size:25px;margin:22px 0}.expertise p{font-size:14px;color:var(--muted)}.tools{font:11px/1.9 monospace;color:var(--accent)}.career{padding-top:0}.career-item{border-top:1px solid var(--line)}.career-item:last-of-type{border-bottom:1px solid var(--line)}.career-item summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:1fr 1.6fr 1fr 20px;gap:24px;align-items:center;padding:25px 0;font-size:14px}.career-item summary b{font-weight:400}.career-item summary span{font-size:12px;color:var(--muted)}.career-item summary:after{content:'+';font-size:22px}.career-item[open] summary:after{content:'−'}.career-description{max-width:1000px;margin-left:27%;padding:0 0 25px;color:var(--muted);font-size:14px}.career-description li{margin:10px 0}.career-description ul{padding-left:20px}.docnote{font-size:12px;color:var(--muted);margin-top:22px}.downloads{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:35px}.download{border:1px solid var(--line);padding:24px;display:flex;justify-content:space-between;align-items:center}.download b{font-size:24px;font-weight:400;display:block}.download small{font:10px monospace;color:var(--muted)}.contact{border-top:1px solid var(--line);background:white}.contact h2{font-size:clamp(36px,5.7vw,80px);text-transform:none;max-width:1000px;margin:25px 0 35px}.contact-links{display:flex;gap:30px;flex-wrap:wrap}.contact-links a{border-bottom:1px solid var(--line);padding-bottom:8px;font-size:14px;color:var(--accent)}footer{border-top:1px solid var(--line);padding:25px 4vw;display:flex;justify-content:space-between;gap:20px;color:var(--muted);font:10px monospace}.image-viewer{border:0;padding:0;background:white;width:96vw;max-width:96vw;max-height:95vh}.image-viewer::backdrop{background:#142319cf}.viewer-bar{display:flex;gap:15px;justify-content:space-between;align-items:center;padding:12px 18px;border-bottom:1px solid var(--line)}.viewer-bar p{font:12px monospace}.viewer-bar button{background:white;border:1px solid var(--line);padding:8px 14px}.viewer-image-wrap{padding:20px;max-height:80vh;overflow:auto}.viewer-image-wrap img{display:block;max-width:100%;height:auto;margin:auto}.viewer-image-wrap.zoomed img{max-width:none}
-@media(max-width:800px){header{padding:16px 5vw}.availability{display:none}nav{gap:16px}.hero{padding:20px 5vw 0}.hero:before{font-size:14vw;margin-bottom:25px}.hero-layout{grid-template-columns:1fr;gap:25px}.hero-top{grid-column:1;grid-row:2}.hero-art{grid-column:1;grid-row:1}.hero-model{height:280px}h1{font-size:42px;letter-spacing:-1.5px}.hero-bottom{font-size:9px;gap:15px}.hero-bottom span:last-child{display:none}section{padding:55px 5vw}.section-head{display:block}.section-head p{margin-top:22px}.project summary{grid-template-columns:25px 1fr 20px;gap:12px}.project summary>small{display:none}.project-content{grid-template-columns:1fr;gap:20px}.gallery{gap:24px 16px}.gallery button{height:260px;padding:5px}.about{grid-template-columns:1fr;gap:30px}.about-copy>p{font-size:20px}.expertise{grid-template-columns:1fr}.career-item summary{grid-template-columns:1fr 20px;gap:6px}.career-item summary b,.career-item summary span{grid-column:1}.career-item summary:after{grid-column:2;grid-row:1/4}.career-description{margin-left:0}.downloads{grid-template-columns:1fr}.contact-links{gap:18px}footer{flex-wrap:wrap}.viewer-bar{flex-wrap:wrap}}
-@media(max-width:520px){.gallery{grid-template-columns:1fr}.gallery button{height:330px}.stats b{font-size:34px}.stats span{font-size:9px}.brand{font-size:13px}nav{font-size:11px}}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dmitriy Ivanov · Structural Engineering Portfolio</title>
+  <style>
+    :root{color-scheme:light;--ink:#15251d;--muted:#4f6158;--green:#164735;--line:#d9e1db;--soft:#eef3ef;--white:#fff}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--white);color:var(--ink);font:1rem/1.55 "Segoe UI",Arial,sans-serif}
+    [hidden]{display:none!important}
+    a{color:inherit;text-underline-offset:.25em}
+    a:focus-visible{outline:2px solid #0c7150;outline-offset:5px}
+    h1,h2,h3,p,figure,dl,dd{margin:0}
+    h1,h2,h3{line-height:1.03;letter-spacing:-.052em;font-weight:650}
+    img{display:block;max-width:100%;border-radius:10px}
+    .frame{--edge:clamp(20px,calc(16vw - 155px),64px);width:min(1560px,calc(100% - 2 * var(--edge)));margin-inline:auto}
+    .masthead{border-bottom:1px solid var(--line)}
+    .masthead .frame,.contact .frame{display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .masthead .frame{min-height:72px}
+    .brand{font-weight:750;text-decoration:none}
+    nav,.links{display:flex;align-items:center;flex-wrap:wrap;gap:12px 25px}
+    nav a{font-size:.9rem;text-decoration:none}
+    nav a:hover,.brand:hover{color:var(--green);text-decoration:underline}
+    .eyebrow{font-size:.84rem;font-weight:750;color:var(--green);letter-spacing:.06em}
+    #expertise,#work,#contact{scroll-margin-top:23px}
+    .intro{display:grid;grid-template-columns:minmax(0,1.85fr) minmax(0,1fr);gap:clamp(24px,6vw,76px);align-items:center;padding-block:clamp(42px,5.5vw,74px) clamp(38px,5vw,62px)}
+    .intro h1{font-size:clamp(1.24rem,2vw,1.55rem);line-height:1.3;letter-spacing:-.025em;font-weight:400;margin:0 0 19px}
+    .intro-summary{font-size:clamp(1.7rem,3.34vw,2.85rem);line-height:1.16;letter-spacing:-.037em;font-weight:500}
+    .lead{font-size:clamp(1.04rem,1.7vw,1.24rem);color:var(--muted)}
+    .building-line{display:flex;align-items:center;gap:0 11px;flex-wrap:wrap;margin-top:22px;min-height:37px;font-size:clamp(1.18rem,2.4vw,1.85rem);line-height:1.25;letter-spacing:-.025em}
+    .building-type{color:var(--green);font-weight:680}
+    .intro-portrait{width:min(100%,340px);margin-inline:auto 0;aspect-ratio:4/5;overflow:hidden;border-radius:12px;background:var(--soft)}
+    .intro-portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 35%}
+    .expertise{padding-bottom:clamp(40px,5vw,68px)}
+    .expertise-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+    .expertise-grid article{padding:23px;background:#f8faf8;border:1px solid var(--line);border-top:3px solid #7b9b85;border-radius:4px}
+    .expertise-grid h3{font-size:clamp(1.2rem,2vw,1.55rem);margin-bottom:10px;letter-spacing:-.033em}
+    .expertise-grid p{color:var(--muted);font-size:.97rem}
+    .links{margin-top:24px}
+    .button{display:inline-flex;align-items:center;justify-content:center;min-height:47px;padding:9px 19px;border-radius:4px;background:var(--green);color:white;text-decoration:none;font-weight:650;font-size:.94rem}
+    .button:hover{background:#205f49}
+    .secondary{font-size:.94rem;font-weight:650;color:var(--green)}
+    .section-label{display:flex;align-items:baseline;justify-content:space-between;gap:18px;border-top:1px solid var(--line);padding-block:22px}
+    .section-label h2{font-size:clamp(2rem,4vw,3rem)}
+    .model-field{display:grid;place-items:center;padding:clamp(17px,4vw,55px);background-color:var(--soft);background-image:linear-gradient(#dfe7e0 1px,transparent 1px),linear-gradient(90deg,#dfe7e0 1px,transparent 1px);background-size:30px 30px}
+    .model-field img{width:100%;height:auto;mix-blend-mode:multiply}
+    .project-list{display:grid;gap:clamp(20px,3vw,42px);margin:12px 0 68px}
+    .project-card{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);align-items:center;gap:clamp(24px,5vw,74px);padding:clamp(24px,4vw,56px);border:1px solid var(--line);border-radius:12px;background:#f3f6f3}
+    .project-card:nth-child(even){background:#f5f5f1}
+    .project-card--station{background:#eaf1eb}
+    .project-copy{display:grid;justify-items:start;gap:13px}
+    .project-tags{display:flex;flex-wrap:wrap;gap:7px;margin:0 0 3px;padding:0;list-style:none}
+    .project-tags li{padding:4px 9px;border:1px solid var(--line);border-radius:8px;background:var(--white);color:var(--green);font-size:.82rem;font-weight:650;line-height:1.35}
+    .project-copy h3{font-size:clamp(1.8rem,3.1vw,3.35rem)}
+    .project-copy p:not(.eyebrow),.body-copy p{color:var(--muted);max-width:44ch}
+    .project-copy .button{margin-top:8px}
+    .project-media{display:grid;place-items:center;aspect-ratio:16/10;min-width:0;overflow:hidden;border-radius:7px;border:1px solid var(--line);background:white}
+    .project-media img{width:100%;height:100%;min-height:0;object-fit:contain}
+    .project-card--sports .project-media{aspect-ratio:1318/583}
+    .project-card--highrise .project-media{aspect-ratio:2/1}
+    .project-card--quarter .project-media{aspect-ratio:3/2}
+    .project-card--seismic .project-media{aspect-ratio:16/9}
+    .project-media.model-field{padding:clamp(12px,2vw,30px)}
+    .contact{background:var(--soft);padding-block:clamp(42px,6vw,76px)}
+    .contact p{margin-top:12px;color:var(--muted);font-size:1.2em}
+    .contact h2{font-size:clamp(1.8rem,4vw,3rem)}
+    .contact .links{margin:0}
+    .back{display:inline-block;margin-block:26px 32px;color:var(--green);font-weight:650}
+    .case-page{--case-text-width:min(72%,1080px)}
+    .case-title{font-size:clamp(2.65rem,5.8vw,5.3rem);margin:11px 0 19px}
+    .case-page :is(.case-title,.lead,.case-band h2,.body-copy,.outcome-metrics){width:var(--case-text-width)}
+    .case-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;text-align:center;margin-top:34px;border-block:1px solid var(--line);padding-block:16px}
+    dt{font-size:.85rem;color:var(--muted);font-weight:650}
+    dd{margin-top:3px;font-weight:680}
+    .case-cover,.case-figure,.pair{width:70%;margin-inline:auto}
+    .case-cover{margin-top:26px}
+    .case-cover .model-field{padding:clamp(8px,2.17vw,29px);border-radius:12px;overflow:hidden}
+    .case-cover img{border-radius:10px}
+    figcaption{color:var(--muted);font-size:.88rem;margin-top:8px}
+    .case-band{padding-block:39px;border-top:1px solid var(--line)}
+    .case-band:first-child{margin-top:58px}
+    .case-band h2{font-size:clamp(1.72rem,3.4vw,2.65rem);margin-bottom:16px}
+    .case-band .body-copy p{max-width:none}
+    .body-copy p+p{margin-top:13px}
+    .pair{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:22px}
+    .case-figure{margin-top:24px}
+    .case-figure img,.pair img{width:100%;height:auto;border:1px solid var(--line);background:white}
+    .case-figure img{max-height:52.5vh;object-fit:contain}
+    :is(.sports-case,.quarter-case,.seismic-case) .case-cover img{width:100%;height:auto}
+    :is(.sports-case,.quarter-case,.seismic-case) .case-figure img{max-height:none}
+    @media(max-width:760px){:is(.sports-case,.quarter-case,.seismic-case) :is(.case-cover,.case-figure),.quarter-case .pair{width:100%}}
+    .pair img{aspect-ratio:4/3;object-fit:contain}
+    .highrise-case .case-cover img{width:100%;height:auto}
+    .highrise-case .case-figure img{max-height:none}
+    .highrise-case .pair img{aspect-ratio:4/4.5}
+    @media(max-width:760px){.highrise-case :is(.case-cover,.case-figure,.pair){width:100%}}
+    .settlement-grid button{display:block;width:100%;padding:0;border:0;border-radius:10px;background:none;cursor:zoom-in}
+    .settlement-grid button:focus-visible{outline:2px solid #0c7150;outline-offset:4px}
+    .settlement-grid img{aspect-ratio:16/10}
+    .figure-viewer{width:max-content;max-width:calc(100% - 24px);max-height:calc(100% - 24px);padding:0;border:1px solid var(--line);border-radius:10px;color:var(--ink)}
+    .figure-viewer::backdrop{background:#15251dcc}
+    .figure-viewer form{position:sticky;top:0;display:flex;justify-content:space-between;align-items:center;gap:12px;padding:8px 14px;background:var(--white);border-bottom:1px solid var(--line)}
+    .figure-viewer button{flex:none;min-height:36px;padding:4px 12px;border:1px solid var(--line);border-radius:5px;background:var(--white);color:var(--green);font:inherit;cursor:pointer}
+    .figure-viewer img{max-width:none;border-radius:0}
+    @media(max-width:760px){.settlement-grid img{aspect-ratio:auto}}
+    .case-end{display:flex;flex-wrap:wrap;gap:14px 25px;align-items:center;border-top:1px solid var(--line);padding-block:28px 55px}
+    .outcome-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:22px}
+    .outcome-metrics div{display:flex;flex-direction:column-reverse;justify-content:flex-end;gap:7px;padding:16px;border:1px solid var(--line);border-radius:7px;background:var(--soft)}
+    .outcome-metrics dd{font-size:clamp(1.5rem,3vw,2.25rem);line-height:1.08;margin:0;color:var(--green)}
+    @media(max-width:760px){.case-page{--case-text-width:100%}}
+    @media(max-width:520px){.outcome-metrics{grid-template-columns:1fr}}
+    @media(max-width:760px){.frame{width:calc(100% - 38px)}.masthead .frame{min-height:63px;gap:15px}nav{gap:12px}nav a{font-size:.83rem}.intro{grid-template-columns:1fr;gap:28px}.intro-portrait{width:min(100%,280px);margin-inline:0}.expertise-grid{grid-template-columns:1fr;gap:12px}.project-card{grid-template-columns:1fr;gap:19px}.pair{grid-template-columns:1fr}.contact .frame{align-items:flex-start;flex-direction:column}.case-facts{grid-template-columns:1fr 1fr}.case-facts div:last-child{grid-column:1/-1}}
+    @media(max-width:430px){.building-line .building-prefix{flex-basis:100%;margin-bottom:4px}.building-line{min-height:56px}.project-card{padding:18px}.section-label{align-items:flex-start;flex-direction:column;gap:6px}.brand{font-size:.86rem}nav{gap:9px}nav a{font-size:.78rem}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+  <header class="masthead">
+    <div class="frame">
+      <nav aria-label="Main navigation">
+        <a href="#expertise">Expertise</a>
+        <a href="#work">Projects</a>
+        <a href="#contact">Contact</a>
+        <a href="assets/cv.pdf" download="Dmitriy_Ivanov_CV.pdf">CV</a>
+      </nav>
+      <a class="brand" href="#home">Dmitriy Ivanov</a>
+    </div>
+  </header>
 
-.career-item summary b{font-size:calc(14px + 2pt);font-weight:700}.career-item summary span{font-size:calc(12px + 2pt);font-weight:700;color:var(--ink)}
-.contact h2{font-size:clamp(38px,5.2vw,72px);line-height:1.1;letter-spacing:-2px;margin-bottom:24px}.contact-intro{max-width:660px;font-size:17px;line-height:1.8;color:var(--muted);margin:0 0 30px}.contact-links{align-items:center}.contact-links .contact-primary{background:var(--accent);color:white;padding:13px 24px;border:1px solid var(--accent)}.contact-links .contact-primary:hover{background:#093e20}.contact-secondary{margin-top:23px;font-size:12px;color:var(--muted)}.contact-secondary a{border-bottom:1px solid var(--line)}@media(max-width:520px){.career-item summary b{font-size:16px}.career-item summary span{font-size:14px}.contact h2{letter-spacing:-1px}.contact-intro{font-size:15px}}
+  <main id="home">
+    <div class="frame">
+      <section class="intro" aria-labelledby="home-title">
+        <div class="intro-copy">
+          <h1 id="home-title" tabindex="-1">Hi, I'm Dmitriy, a structural engineer. <span aria-hidden="true">👋</span></h1>
+          <p class="intro-summary">For over nine years, I've designed, analysed and modelled buildings and structures of all kinds, from the initial concept.</p>
+          <div class="building-line">
+            <span class="building-prefix">I work on</span>
+            <strong class="building-type" id="building-type">high-rise buildings</strong>
+          </div>
+          <div class="links">
+            <a class="button" href="#work">My projects</a>
+          </div>
+        </div>
+        <figure class="intro-portrait">
+          <img src="assets/portfolio/4a7983fbc97e9ea5.jpg" alt="Dmitriy Ivanov">
+        </figure>
+      </section>
 
-.filters button{font-size:16px;font-weight:700;padding:12px 18px}.contact-links a{font-size:18px;font-weight:700}.contact-links .contact-primary{padding:15px 28px}.contact-secondary,.contact-secondary a{font-size:16px;font-weight:700}@media(max-width:520px){.filters button{font-size:14px;padding:10px 12px}.contact-links a{font-size:16px}.contact-secondary,.contact-secondary a{font-size:15px}}
+      <section class="expertise" id="expertise" aria-labelledby="expertise-title">
+        <div class="section-label"><h2 id="expertise-title">What I bring to engineering teams</h2></div>
+        <div class="expertise-grid">
+          <article><h3>Structural analysis</h3><p>I develop and validate advanced FEM models to assess complex structural behaviour, including nonlinear response, seismic effects, stability, progressive collapse and soil-structure interaction, translating analysis results into safe, efficient and buildable engineering solutions.</p></article>
+          <article><h3>Concrete &amp; steel design</h3><p>I design complex reinforced concrete and steel structures, including high-rise buildings, long-span roof systems, transfer structures and deep foundations.</p></article>
+          <article><h3>BIM coordination &amp; delivery</h3><p>I develop Revit models, families and project templates, coordinate disciplines using Navisworks, and lead design reviews from engineering analysis through documentation.</p></article>
+        </div>
+      </section>
 
-header .brand{font-size:20px;font-weight:700}header nav{font-size:16px;font-weight:700}header .availability{font-size:12px;font-weight:700}.intro .link{font-size:18px;font-weight:700;padding:14px 0}.expertise .num{font-size:13px}.expertise h3{font-size:29px}.expertise p{font-size:17px;line-height:1.8}.expertise .tools{font-size:14px;line-height:1.9}@media(max-width:800px){header .brand{font-size:17px}header nav{font-size:14px;gap:16px}.expertise h3{font-size:27px}.expertise p{font-size:16px}}@media(max-width:520px){header{flex-wrap:wrap;gap:10px}header .brand{font-size:17px}header nav{font-size:14px}.intro .link{font-size:16px}.expertise .tools{font-size:13px}}
-.contact-links button.contact-primary{font:700 18px Arial,sans-serif;cursor:pointer}.email-dialog{border:1px solid #d9dfda;padding:38px;max-width:94vw;color:#171d19}.email-dialog::backdrop{background:#142319bb}.email-close{float:right;border:0;background:white;font-size:26px;cursor:pointer}.email-address{font-size:clamp(17px,3vw,25px);color:#075525}.email-actions{display:flex;gap:20px;flex-wrap:wrap;align-items:center;margin-top:25px}.email-actions button{background:#075525;color:white;padding:12px 18px;border:0;cursor:pointer}.email-actions a{border-bottom:1px solid #d9dfda}#email-status{font-size:13px;color:#626c65}</style></head><body>
-<header><a class="brand" href="#home">Dmitriy Ivanov</a><nav aria-label="Main navigation"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact </a></nav><span class="availability">OPEN TO RELOCATION</span></header>
-<main id="home"><div class="hero"><div class="eyebrow">Structural engineering / Selected portfolio</div><div class="hero-layout"><div class="hero-top"><h1>Dmitriy Ivanov.<br><em>Senior Structural Engineer.</em></h1><div class="intro"><p>I'm Dmitriy, a senior structural engineer working across reinforced concrete, long-span steel and BIM - from global analysis to the details that make a structure buildable.</p><a class="link" href="#work">Explore selected work <span></span></a></div></div>
-<div class="hero-art"><span class="art-label">SELECTED PROJECT / RAILWAY STATION</span><img class="hero-model" src="assets/image-1.png" alt="Structural BIM model of a railway station and passenger concourses"><span class="art-note">STRUCTURAL BIM / REVIT</span></div></div><div class="hero-bottom"><span>REINFORCED CONCRETE & STEEL</span><span>FEM ANALYSIS + BIM DELIVERY</span><span>SELECTED WORK / 01-05</span></div></div>
-<section id="work"><div class="section-label">01 / Selected work</div><div class="section-head"><h2>Selected engineering<br>work.</h2><p>High-rise housing, long-span roofs and transport infrastructure. Explore the decisions behind each structural system.</p></div><div class="filters" aria-label="Filter projects"><button class="active" data-filter="all" aria-pressed="true">All projects <span>05</span></button><button data-filter="concrete" aria-pressed="false">Reinforced concrete</button><button data-filter="steel" aria-pressed="false">Steel & infrastructure</button><button data-filter="bim" aria-pressed="false">BIM & coordination</button></div><div class="projects" id="projects"></div></section>
-<section class="about" id="about"><div><div class="section-label">02 / About</div><h2>Analysis.<br>Detail.<br>Delivery.</h2></div><div class="about-copy"><p>I work at the intersection of structural analysis and practical design - developing steel and reinforced-concrete structures, verifying their behaviour and translating the results into coordinated construction documentation.</p><p style="font-size:15px;color:#b5bcae;letter-spacing:0">My experience spans residential buildings, railway stations, long-span roofs and challenging ground conditions. Alongside hands-on engineering, I lead design reviews, coordinate disciplines and guide a team of five structural engineers.</p><div class="stats"><div><b>9+</b><span>YEARS IN STRUCTURAL DESIGN</span></div><div><b>7+</b><span>YEARS WITH REVIT</span></div><div><b>5</b><span>ENGINEERS IN MY TEAM</span></div></div></div></section>
-<section><div class="section-label">03 / Engineering toolkit</div><div class="section-head"><h2>From behaviour<br>to buildable detail.</h2></div><div class="expertise"><article><span class="num">01 - ANALYSE</span><h3>Structural behaviour</h3><p>Finite element modelling, nonlinear and seismic analysis, progressive-collapse assessment, wind response and soil-structure interaction.</p><div class="tools">LIRA-SAPR / SCAD / ETABS<br>Robot Structural Analysis / SOFiSTiK</div></article><article><span class="num">02 - DESIGN</span><h3>Concrete & steel</h3><p>Reinforced-concrete frames, long-span steel trusses, pile and raft foundations, reinforcement detailing and structural steel connections.</p><div class="tools">IDEA StatiCa<br>Eurocodes / GOST / ACI / AISC - knowledge</div></article><article><span class="num">03 - COORDINATE</span><h3>BIM & documentation</h3><p>Detailed structural models, multidisciplinary coordination, clash review, load modelling, calculation reports and construction drawings.</p><div class="tools">Autodesk Revit / Tekla Structures<br>AutoCAD / Civil 3D / BIM 360</div></article></div></section>
-<section class="career"><div class="section-label" style="margin-bottom:25px">04 / Experience</div><details class="career-item"><summary><b>RZD International</b><span>Structural Engineering Team Lead</span><span>Jul 2025 - Present</span></summary><div class="career-description"><p>Lead structural design, analysis and BIM delivery for complex railway station buildings and passenger infrastructure, managing a team of five structural engineers while remaining hands-on in modelling, calculations and design.</p><ul><li>Analyse and design railway station buildings, entrance halls and concourses, including steel, reinforced-concrete and long-span systems.</li><li>Develop Revit analytical and purpose-built frame models for permanent, imposed, technological, erection and accidental loads, including escalator and lift loads.</li><li>Design long-span structures, including a 30 m steel roof truss and an 18 m reinforced-concrete beam where underground utilities prevent intermediate supports.</li><li>Assess progressive collapse through critical column and beam removal scenarios.</li><li>Coordinate with architects, MEP engineers, railway infrastructure teams, clients and Project Managers to resolve interfaces and evaluate design changes.</li><li>Represent structural designs during state technical review and substantiate decisions through calculations, models and drawings.</li><li>Review team calculations, drawings and BIM models and provide technical guidance.</li></ul></div></details><details class="career-item"><summary><b>IBS</b><span>Structural Engineering Team Lead</span><span>Feb 2022 - Jul 2025</span></summary><div class="career-description"><p>Led structural analysis, design and BIM delivery for complex reinforced-concrete residential developments, managing five structural engineers while remaining hands-on in analysis and design.</p><ul><li>Design multi-storey and high-rise RC buildings with wall-and-pier systems, foundations and detailed reinforcement.</li><li>Perform nonlinear analysis with specified reinforcement and optimise bar spacing, quantity and diameter.</li><li>Design a 25-storey, three-section residential complex with underground parking, 1,000 mm × 27 m bored piles, wind response and differential settlement assessment.</li><li>Perform seismic analysis for 16- and 9-storey RC buildings on pile foundations.</li><li>Design pile and raft foundations and assess soil-structure interaction on weak and waterlogged soils.</li><li>Coordinate structural, architectural and MEP models in Revit and resolve clashes.</li><li>Review calculations, reinforcement, drawings and BIM models and guide engineers.</li></ul></div></details><details class="career-item"><summary><b>Meetorra LTD</b><span>Senior Civil Structural Engineer</span><span>Sep 2019 - Jan 2022</span></summary><div class="career-description"><p>Performed structural analysis, design and BIM documentation for reinforced-concrete and structural steel building projects.</p><ul><li>Design steel warehouses, including analysis, member design, connections and construction documentation.</li><li>Analyse multi-storey cast-in-place RC parking structures and a 20-storey residential building in LIRA-SAPR.</li><li>Develop solutions from analysis models through detailed design and documentation under senior engineering review.</li><li>Produce detailed Revit models, reinforcement, connections, schedules and construction drawings.</li><li>Coordinate with architectural and MEP disciplines.</li><li>Participate in assessment, restoration and strengthening of existing buildings.</li></ul></div></details><details class="career-item"><summary><b>Saratov Grazhdanproekt</b><span>Junior Structural Analysis Engineer</span><span>Mar 2017 - Aug 2019</span></summary><div class="career-description"><p>Supported structural engineers in developing and analysing structural calculation models using MicroFe.</p><ul><li>Prepare analysis models, individual structural components and model geometry.</li><li>Prepare structural plans, sections and input data for finite element modelling.</li><li>Assist with model preparation and verification before calculations.</li><li>Process analysis results and prepare calculation reports and supporting documentation.</li><li>Develop practical knowledge of structural analysis and finite element modelling under experienced engineers.</li></ul></div></details><p class="docnote">BSc Industrial and Civil Engineering · Saratov State Technical University, 2019<br>English - Professional working proficiency · Russian - Native</p><div class="downloads"><a class="download" href="assets/cv.pdf" target="_blank" rel="noopener"><div><b>Curriculum vitae</b><small>PDF / 2 PAGES</small></div><span></span></a><a class="download" href="assets/portfolio.pdf" target="_blank" rel="noopener"><div><b>Full project portfolio</b><small>PDF / 44 PAGES</small></div><span></span></a></div></section>
-<section id="contact" class="contact"><div class="section-label">05 / Get in touch</div><h2>Let’s build<br>what’s next.</h2><p class="contact-intro">I’m open to structural engineering opportunities and international relocation. If my experience fits your team, I’d be glad to hear from you.</p><div class="contact-links"><button class="contact-primary" type="button" id="email-me">Email me</button><a href="https://www.linkedin.com/in/dmitriy-ivanov-construct" target="_blank" rel="noopener">LinkedIn</a><a href="assets/cv.pdf" target="_blank" rel="noopener">Download CV</a></div><p class="contact-secondary">Also available on <a href="https://t.me/dmitriy6402010" target="_blank" rel="noopener">Telegram</a></p></section></main><footer><span>Dmitriy Ivanov · Structural Engineer</span><span>© 2026</span><a href="#home">Back to top</a></footer>
-<dialog class="image-viewer" id="image-viewer" aria-labelledby="viewer-caption"><div class="viewer-bar"><p id="viewer-caption"></p><button id="zoom-image" type="button">Original size</button><button id="close-viewer" type="button" aria-label="Close image viewer">Close ×</button></div><div class="viewer-image-wrap"><img id="viewer-image" alt=""></div></dialog><script>
-const portfolioUrl='assets/portfolio.pdf';
-const data=[
-{title:'25-storey residential complex',category:'concrete bim',type:'HIGH-RISE / RC',challenge:'Weak founding soils, groundwater and constrained excavation for a three-section residential complex with an underground car park.',solution:'Developed a bored-pile foundation using 1,000 mm diameter, 27 m long piles. Staged construction checks addressed the propped sheet-pile wall; nonlinear analysis supported reinforcement design, with relative section movement and differential settlement included.',scope:'Structural analysis · Foundation design · Reinforcement detailing · BIM coordination',facts:['25 storeys','27 m bored piles','Revit / Lira'],pages:'04-15'},
-{title:'Sports complex · 37 m roof',category:'steel bim',type:'LONG-SPAN / STEEL',challenge:'A column-free ice rink in a northern region with winter temperatures around −50°C, founded on weak peat soils affected by seasonal freezing and thawing.',solution:'Designed a pile-supported RC grillage on 400 × 400 mm, 16 m driven precast piles. The 37 m steel roof trusses were checked for permanent, snow and suspended-equipment loads; chord joints enabled transport in sections and site assembly.',scope:'Foundation design · Roof-truss analysis · Transport joints · BIM coordination',facts:['37 m clear span','16 m driven piles','Revit / Lira'],pages:'16-20'},
-{title:'Residential design in a seismic region',category:'concrete',type:'SEISMIC / RC',challenge:'16- and 9-storey cast-in-place sections on weak, waterlogged soils, with local constraints limiting pile dimensions and length.',solution:'Developed a column-and-wall-pier system and assessed seismic action in all relevant directions, including natural frequencies and centres of mass. A multi-row layout optimised the available 300 × 300 mm, 12 m precast piles.',scope:'Seismic analysis · Structural system · Pile foundations · Construction documentation',facts:['16 + 9 storeys','12 m precast piles','Lira / SCAD / Revit'],pages:'21-25'},
-{title:'Railway station & three concourses',category:'steel concrete bim',type:'TRANSPORT / ROBUSTNESS',challenge:'Operating railway lines and existing underground utilities constrained support locations, alongside the robustness requirements of a high-occupancy public building.',solution:'Introduced spans of approximately 12-18 m where needed and assessed alternate load paths following notional column and beam removal. Designed steel connections and developed precast components, coordinated documentation and substantiated the design for state technical review.',scope:'BIM modelling · Structural analysis · Progressive collapse · Connection design',facts:['3 concourses','12-18 m spans','Revit / Lira / IDEA StatiCa'],pages:'26-34'},
-{title:'Residential quarter & underground parking',category:'concrete bim',type:'MULTI-BUILDING / BIM',challenge:'A multi-section development on weak, waterlogged soils, with a shared underground car park and a high density of building services.',solution:'Checked uplift, bearing capacity and differential settlement. Modelled loads in Revit for export to the analysis software and coordinated unique apartment types, finishes, services and landscape interfaces across the development.',scope:'Load modelling · Global analysis · Soil-structure interaction · Reinforcement design',facts:['Shared underground car park','Revit load workflow','Lira Soil'],pages:'35-44'}];
-document.getElementById('projects').innerHTML=data.map((p,i)=>'<details class="project" data-category="'+p.category+'" '+(i===1?'open':'')+'><summary><span class="num">0'+(i+1)+'</span><h3>'+p.title+'</h3><small>'+p.type+'</small><span class="plus" aria-hidden="true">+</span></summary><div class="project-content"><div><h4>The challenge</h4><p>'+p.challenge+'</p><div class="facts">'+p.facts.map(f=>'<span>'+f+'</span>').join('')+'</div></div><div><h4>Engineering response</h4><p>'+p.solution+'</p><h4>Scope</h4><p>'+p.scope+'</p><a class="source-link" href="'+portfolioUrl+'" target="_blank" rel="noopener">PORTFOLIO PDF / PAGES '+p.pages+' </a></div></div></details>').join('');
-document.querySelectorAll('[data-filter]').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('[data-filter]').forEach(x=>{x.classList.toggle('active',x===b);x.setAttribute('aria-pressed',String(x===b))});document.querySelectorAll('.project').forEach(p=>p.hidden=b.dataset.filter!=='all'&&!p.dataset.category.split(' ').includes(b.dataset.filter))}));
+      <section id="work" aria-labelledby="work-title">
+        <div class="section-label"><h2 id="work-title">Selected projects</h2></div>
+        <div class="project-list">
+          <article class="project-card project-card--station">
+            <div class="project-copy">
+              <ul class="project-tags" aria-label="Tools and expertise">
+                <li>Revit</li>
+                <li>LIRA-SAPR</li>
+                <li>IDEA StatiCa</li>
+                <li>FEM Analysis</li>
+                <li>Steel Structures</li>
+              </ul>
+              <h3>Railway station with four concourses</h3>
+              <p>Complex railway infrastructure featuring long-span steel and reinforced concrete structures, advanced FEM analysis, progressive collapse assessment and multidisciplinary coordination.</p>
+              <a class="button" href="#station">View case study</a>
+            </div>
+            <figure class="project-media model-field"><img src="assets/portfolio/7c21d6fb07e9717a.png" alt="Revit model of the railway station and passenger concourses"></figure>
+          </article>
+          <article class="project-card project-card--sports">
+            <div class="project-copy">
+              <ul class="project-tags" aria-label="Tools">
+                <li>Revit</li>
+                <li>LIRA-SAPR</li>
+                <li>IDEA StatiCa</li>
+                <li>37 m Span</li>
+                <li>Steel Trusses</li>
+              </ul>
+              <h3>Long-span sports complex</h3>
+              <p>A multifunctional sports complex featuring a swimming pool and indoor sports facilities, with steel roof trusses spanning up to 37 m and pile-supported foundations in challenging ground conditions.</p>
+              <a class="button" href="#sports">View case study</a>
+            </div>
+            <figure class="project-media"><img src="assets/portfolio/f38fb07da3db29f9.png" alt="Architectural rendering of the sports complex viewed from the entrance plaza" width="1318" height="583" loading="lazy"></figure>
+          </article>
+          <article class="project-card project-card--highrise">
+            <div class="project-copy">
+              <ul class="project-tags" aria-label="Tools and structural scope">
+                <li>Revit</li>
+                <li>LIRA-SAPR</li>
+                <li>Navisworks</li>
+                <li>Nonlinear FEM</li>
+                <li>CFA Piles</li>
+              </ul>
+              <h3>25-storey residential complex</h3>
+              <p>A 25-storey reinforced concrete residential complex with underground parking, supported by 1,325 CFA piles. The design involved advanced nonlinear structural analysis, complex foundation engineering and multidisciplinary BIM coordination.</p>
+              <a class="button" href="#highrise">View case study</a>
+            </div>
+            <figure class="project-media"><img src="assets/portfolio/dad984669d7b9ce3.jpg" alt="Architectural rendering of the 25-storey residential complex" width="1920" height="960" loading="lazy"></figure>
+          </article>
+          <article class="project-card project-card--seismic">
+            <div class="project-copy">
+              <ul class="project-tags" aria-label="Tools and structural scope">
+                <li>Revit</li>
+                <li>LIRA-SAPR</li>
+                <li>SCAD</li>
+                <li>Seismic Design</li>
+                <li>Pile Foundations</li>
+              </ul>
+              <h3>Residential design in a seismic region</h3>
+              <p>A residential development comprising four reinforced concrete buildings of 9 and 16 storeys, designed for seismic intensity 8 on pile foundations in challenging peat soil conditions.</p>
+              <a class="button" href="#seismic">View case study</a>
+            </div>
+            <figure class="project-media"><img src="assets/portfolio/df01ce5352cc03ba.jpg" alt="Architectural rendering of the residential development from the street" width="2048" height="1152" loading="lazy"></figure>
+          </article>
+          <article class="project-card project-card--quarter">
+            <div class="project-copy">
+              <ul class="project-tags" aria-label="Tools and structural scope">
+                <li>Revit</li>
+                <li>LIRA-SAPR</li>
+                <li>Navisworks</li>
+                <li>Underground Parking</li>
+                <li>Precast Balconies</li>
+              </ul>
+              <h3>Residential quarter &amp; underground parking</h3>
+              <p>A residential development with shared underground parking, challenging groundwater conditions and complex structural connections for prefabricated balconies, requiring detailed design and multidisciplinary BIM coordination.</p>
+              <a class="button" href="#quarter">View case study</a>
+            </div>
+            <figure class="project-media"><img src="assets/portfolio/c6e0d70726f8638c.jpg" alt="Architectural rendering of the residential blocks and landscaped grounds" width="1200" height="800" loading="lazy"></figure>
+          </article>
+        </div>
+      </section>
+    </div>
+  </main>
 
-const galleries=[[{"file": "doc-1.png", "caption": "Overall reinforced Revit model"}, {"file": "doc-2.png", "caption": "Wall pier reinforcement"}, {"file": "doc-3.png", "caption": "Slab and local reinforcement"}, {"file": "doc-4.png", "caption": "Wall pier and slab connection"}, {"file": "doc-5.png", "caption": "Local reinforcement detail"}, {"file": "doc-6.png", "caption": "Reinforcement interface"}, {"file": "doc-7.png", "caption": "Crane foundation interface"}, {"file": "doc-8.png", "caption": "Structural analysis model"}, {"file": "doc-9.png", "caption": "Analysis model setup"}, {"file": "doc-10.png", "caption": "Pile-force distribution model"}, {"file": "doc-11.png", "caption": "Foundation response"}, {"file": "doc-12.png", "caption": "Wind-induced displacement"}, {"file": "doc-13.png", "caption": "Foundation slab reinforcement"}, {"file": "doc-14.png", "caption": "Reinforcement documentation"}, {"file": "doc-15.png", "caption": "Structural plans and details"}, {"file": "doc-16.png", "caption": "Structural sections"}, {"file": "doc-17.png", "caption": "Construction details"}], [{"file": "sport-1.png", "caption": "Overall Revit structural model"}, {"file": "sport-2.png", "caption": "37 m roof truss model"}, {"file": "sport-3.png", "caption": "Pile foundation and geotechnical section"}, {"file": "sport-4.png", "caption": "Limit-state verification results"}, {"file": "sport-5.png", "caption": "Vertical displacement results · mm"}, {"file": "sport-6.png", "caption": "Global finite element model"}, {"file": "sport-7.png", "caption": "Truss axial force results · t"}, {"file": "sport-8.png", "caption": "Completed sports complex"}, {"file": "sport-9.png", "caption": "37.1 m transverse section"}], [{"file": "doc-18.png", "caption": "Lira structural model"}, {"file": "doc-19.png", "caption": "SCAD structural model"}, {"file": "doc-20.png", "caption": "Seismic displacement response"}, {"file": "doc-21.png", "caption": "Pile layout and foundation detailing"}, {"file": "doc-22.png", "caption": "Foundation reinforcement plans"}], [{"file": "doc-23.png", "caption": "Overall railway station Revit model"}, {"file": "doc-24.png", "caption": "Reinforced concrete detailing"}, {"file": "doc-25.png", "caption": "Structural steel detailing"}, {"file": "doc-26.png", "caption": "Progressive-collapse analysis model"}, {"file": "doc-27.png", "caption": "Response following column removal"}, {"file": "doc-28.png", "caption": "Structural response verification"}, {"file": "doc-29.png", "caption": "Steel connection model"}, {"file": "doc-30.png", "caption": "Connection stress results"}, {"file": "extra-1.png", "caption": "Steel connection - additional detail 1"}, {"file": "extra-2.png", "caption": "Steel connection - additional detail 2"}, {"file": "doc-31.png", "caption": "Bolted connection detail"}, {"file": "doc-32.png", "caption": "Steel connection detailing"}, {"file": "extra-4.png", "caption": "Steel connection detail - bracing and beam splice"}, {"file": "extra-3.png", "caption": "Steel connection detail - additional view"}], [{"file": "doc-34.png", "caption": "Overall residential development BIM model"}, {"file": "doc-35.png", "caption": "Revit load modelling"}, {"file": "doc-36.png", "caption": "Load model view filters"}, {"file": "doc-37.png", "caption": "Dedicated load plans"}, {"file": "doc-38.png", "caption": "Global structural analysis model"}, {"file": "doc-39.png", "caption": "Differential settlement response"}, {"file": "doc-40.png", "caption": "Building section reinforcement model"}, {"file": "doc-41.png", "caption": "Slab reinforcement results"}, {"file": "doc-42.png", "caption": "Geotechnical model"}, {"file": "doc-43.png", "caption": "Foundation settlement results"}]];
-const extraImages={"extra-1.png": "assets/image-2.png", "extra-2.png": "assets/image-3.png", "extra-3.png": "assets/image-4.png", "extra-4.png": "assets/image-5.png"};
-const viewer=document.getElementById('image-viewer'),viewerImg=document.getElementById('viewer-image'),viewerCaption=document.getElementById('viewer-caption'),viewerWrap=document.querySelector('.viewer-image-wrap');
-document.querySelectorAll('.project-content').forEach((content,i)=>{const gallery=document.createElement('div');gallery.className='gallery';const note=document.createElement('p');note.className='gallery-note';note.textContent='PROJECT GALLERY / Select an image to enlarge';gallery.appendChild(note);galleries[i].forEach((item,j)=>{const figure=document.createElement('figure'),button=document.createElement('button'),img=document.createElement('img'),caption=document.createElement('figcaption');button.type='button';button.setAttribute('aria-label','Enlarge: '+item.caption);img.src={"doc-1.png":"assets/image-6.png","doc-10.png":"assets/image-7.png","doc-11.png":"assets/image-8.png","doc-12.png":"assets/image-9.png","doc-13.png":"assets/image-10.png","doc-14.png":"assets/image-11.png","doc-15.png":"assets/image-12.png","doc-16.png":"assets/image-13.png","doc-17.png":"assets/image-14.png","doc-18.png":"assets/image-15.png","doc-19.png":"assets/image-16.png","doc-2.png":"assets/image-17.png","doc-20.png":"assets/image-18.png","doc-21.png":"assets/image-19.png","doc-22.png":"assets/image-20.png","doc-23.png":"assets/image-21.png","doc-24.png":"assets/image-22.png","doc-25.png":"assets/image-23.png","doc-26.png":"assets/image-24.png","doc-27.png":"assets/image-25.png","doc-28.png":"assets/image-26.png","doc-29.png":"assets/image-27.png","doc-3.png":"assets/image-28.png","doc-30.png":"assets/image-29.png","doc-31.png":"assets/image-30.png","doc-32.png":"assets/image-31.png","doc-33.png":"assets/image-32.png","doc-34.png":"assets/image-33.png","doc-35.png":"assets/image-34.png","doc-36.png":"assets/image-35.png","doc-37.png":"assets/image-36.png","doc-38.png":"assets/image-37.png","doc-39.png":"assets/image-38.png","doc-4.png":"assets/image-39.png","doc-40.png":"assets/image-40.png","doc-41.png":"assets/image-41.png","doc-42.png":"assets/image-42.png","doc-43.png":"assets/image-43.png","doc-5.png":"assets/image-44.png","doc-6.png":"assets/image-45.png","doc-7.png":"assets/image-46.png","doc-8.png":"assets/image-47.png","doc-9.png":"assets/image-48.png","sport-1.png":"assets/image-49.png","sport-2.png":"assets/image-50.png","sport-3.png":"assets/image-51.png","sport-4.png":"assets/image-52.png","sport-5.png":"assets/image-53.png","sport-6.png":"assets/image-54.png","sport-7.png":"assets/image-55.png","sport-8.png":"assets/image-56.png","sport-9.png":"assets/image-57.png","title.png":"assets/image-1.png"}[item.file];if(extraImages[item.file])img.src=extraImages[item.file];img.alt=item.caption;img.loading='lazy';caption.textContent=item.caption;button.appendChild(img);button.addEventListener('click',()=>{viewerImg.src=img.src;viewerImg.alt=item.caption;viewerCaption.textContent=item.caption;viewerWrap.classList.remove('zoomed');document.getElementById('zoom-image').textContent='Original size';viewer.showModal()});figure.append(button,caption);gallery.appendChild(figure)});content.appendChild(gallery)});
-document.getElementById('close-viewer').addEventListener('click',()=>viewer.close());
-document.getElementById('zoom-image').addEventListener('click',e=>{const zoomed=viewerWrap.classList.toggle('zoomed');e.currentTarget.textContent=zoomed?'Fit to screen':'Original size'});
-viewer.addEventListener('click',e=>{if(e.target===viewer)viewer.close()});
-</script><dialog id="email-dialog" class="email-dialog" aria-labelledby="email-title"><button type="button" id="email-close" class="email-close" aria-label="Close">×</button><h3 id="email-title">Get in touch</h3><p>Write to me at:</p><a class="email-address" href="mailto:dmitriy206418@gmail.com">dmitriy206418@gmail.com</a><div class="email-actions"><button type="button" id="copy-email">Copy email address</button><a href="mailto:dmitriy206418@gmail.com">Open email app</a></div><p id="email-status" role="status"></p></dialog><script>
-const emailDialog=document.getElementById('email-dialog');document.getElementById('email-me').addEventListener('click',()=>emailDialog.showModal());document.getElementById('email-close').addEventListener('click',()=>emailDialog.close());emailDialog.addEventListener('click',e=>{if(e.target===emailDialog)emailDialog.close()});document.getElementById('copy-email').addEventListener('click',async()=>{try{await navigator.clipboard.writeText('dmitriy206418@gmail.com');document.getElementById('email-status').textContent='Email address copied.'}catch{document.getElementById('email-status').textContent='Select and copy the address above.'}});
-</script><script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a5eddba628aa6a44',t:'MTc5NTQxMjYyNA=='};var l=window.parent.location,o;try{o=new URL(l.origin).origin}catch(e){try{o=new URL(new URL(l.href).origin).origin}catch(e){o=''}}var u='/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a5eddba628aa6a44',a=document.createElement('script');a.src=o?new URL(u,o).href:u;document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
+  <main class="case-page" id="station" hidden>
+    <article class="frame">
+      <a class="back" href="#work">Back to projects</a>
+      <div>
+          <h1 id="station-title" class="case-title" tabindex="-1">Railway station with four concourses</h1>
+          <p class="lead">Two constraints shaped the design: existing infrastructure beneath the platform and progressive collapse assessment for all four passenger concourses.</p>
+      </div>
+
+      <dl class="case-facts">
+        <div><dt>My role</dt><dd>Structural Engineering Team Lead</dd></div>
+        <div><dt>Platform structure</dt><dd>18 m reinforced concrete beam</dd></div>
+        <div><dt>Tools</dt><dd>Revit · LIRA-SAPR · IDEA StatiCa</dd></div>
+      </dl>
+
+      <figure class="case-cover">
+          <div class="model-field"><img src="assets/portfolio/6ea8446f31249663.png" alt="Full structural model of the station spanning the railway corridor"></div>
+        <figcaption>Overall Revit model of the station and its passenger concourses.</figcaption>
+      </figure>
+
+      <div>
+        <section class="case-band">
+          <h2>Spanning over existing infrastructure</h2>
+          <div class="body-copy">
+            <p>Underground utilities and an existing pedestrian underpass beneath the platform limited where new supports could be placed. We used an 18 m reinforced concrete beam to carry the platform across the constrained area without an intermediate support.</p>
+          </div>
+          <figure class="case-figure"><img src="assets/portfolio/1c02f0736b0d67d1.jpg" alt="Revit view of the platform beam spanning over an existing underground pipe"><figcaption>The 18 m platform beam in Revit. The pipe shown is one of the existing constraints beneath the platform.</figcaption></figure>
+        </section>
+        <section class="case-band">
+          <h2>Assessing progressive collapse in all four concourses</h2>
+          <div class="body-copy">
+            <p>All four concourses were classed as areas of mass occupancy, so each required a progressive collapse assessment. I used finite element models to study the structural response and load redistribution after the notional removal of selected columns and beams.</p>
+          </div>
+          <figure class="case-figure"><img src="assets/portfolio/788c9ae6a8e7771b.png" alt="Finite element model used for the robustness assessment"><figcaption>Finite element model used for the progressive collapse assessment.</figcaption></figure>
+          <figure class="case-figure"><img src="assets/portfolio/cc716484f33d1aa0.png" alt="Analysis output for a column removal scenario"><figcaption>Structural response for an example of notional column removal.</figcaption></figure>
+          <figure class="case-figure"><img src="assets/portfolio/e72d4826351262d2.png" alt="Structural analysis model coloured by steel member utilisation"><figcaption>Steel member utilisation from the structural analysis model.</figcaption></figure>
+        </section>
+        <section class="case-band">
+          <h2>From analysis to connection design</h2>
+          <div class="body-copy">
+            <p>Findings from the structural assessment informed the design of the steel connections. I detailed the connections in Revit and used IDEA StatiCa to check component behaviour.</p>
+          </div>
+          <figure class="case-figure"><img src="assets/portfolio/d984d856ae01a6e6.png" alt="Revit model showing bracing and the surrounding steel framing"><figcaption>Steel framing and bracing in the Revit model.</figcaption></figure>
+          <div class="pair">
+            <figure><img src="assets/portfolio/8418bc92857b1f53.png" alt="Revit model of a bolted beam-to-column connection"><figcaption>Revit detail showing the plates and bolt layout.</figcaption></figure>
+            <figure><img src="assets/portfolio/90616de0c403ae15.png" alt="IDEA StatiCa model of the steel connection with plate, bolt and weld checks"><figcaption>IDEA StatiCa model and component checks.</figcaption></figure>
+          </div>
+          <figure class="case-figure"><img src="assets/portfolio/13c594fed59dc1b8.png" alt="IDEA StatiCa stress plot for the steel connection"><figcaption>Stress distribution in the connection model.</figcaption></figure>
+          <div class="pair">
+            <figure><img src="assets/portfolio/e20ff2b1472d158f.png" alt="Revit detail of two inclined beams connected to a column"><figcaption>Inclined beam-to-column connection in Revit.</figcaption></figure>
+            <figure><img src="assets/portfolio/f33c8e30e97f5842.png" alt="IDEA StatiCa model of the inclined beam-to-column connection"><figcaption>The inclined connection model in IDEA StatiCa.</figcaption></figure>
+          </div>
+          <div class="pair">
+            <figure><img src="assets/portfolio/12bb4db4bda21922.png" alt="Revit view of the column and bolted beam plates"><figcaption>Additional Revit view of a bolted beam-to-column detail.</figcaption></figure>
+            <figure><img src="assets/portfolio/372592f32a92d02b.png" alt="IDEA StatiCa model of a four-way connection"><figcaption>Four-way steel connection in IDEA StatiCa.</figcaption></figure>
+          </div>
+          <figure class="case-figure"><img src="assets/portfolio/c701a4ef38e3bdc1.png" alt="Isometric view showing bolted splices in the braced steel frame"><figcaption>Revit isometric of beam splices and surrounding framing.</figcaption></figure>
+        </section>
+        <section class="case-band">
+          <h2>My contribution</h2>
+          <div class="body-copy"><p>I worked on the structural models, designed steel connections, developed precast concrete components and coordinated the structural documentation. I also presented and substantiated engineering decisions during state technical review.</p></div>
+        </section>
+        <section class="case-band" aria-labelledby="station-outcome">
+          <h2 id="station-outcome">Project outcome</h2>
+          <dl class="outcome-metrics">
+            <div><dt>Documentation and material quantities</dt><dd>6 months</dd></div>
+            <div><dt>Team members I coordinated</dt><dd>4</dd></div>
+            <div><dt>Meetings with the client</dt><dd>Weekly</dd></div>
+          </dl>
+          <div class="body-copy">
+            <p>We completed the structural documentation and material quantity take-offs in Revit in six months. We handed the quantity schedules over to the cost estimating team to support procurement.</p>
+            <p>I assigned tasks and coordinated the four-person team. I met with the client weekly, and we incorporated many of the requested changes into the design.</p>
+            <p><strong>The project passed the state design review and is now under construction.</strong></p>
+          </div>
+        </section>
+      </div>
+
+      <div class="case-end">
+        <a class="secondary" href="#work">All projects</a>
+      </div>
+    </article>
+  </main>
+
+  <main class="case-page sports-case" id="sports" hidden>
+    <article class="frame">
+      <a class="back" href="#work">Back to projects</a>
+      <h1 id="sports-title" class="case-title" tabindex="-1">Long-span sports complex</h1>
+      <p class="lead">A swimming pool, an ice rink and indoor sports courts share a single building. Long-span roof trusses keep the main activity areas clear of intermediate supports.</p>
+
+      <dl class="case-facts">
+        <div><dt>Maximum roof span</dt><dd>37 m</dd></div>
+        <div><dt>Facilities</dt><dd>Swimming pool · Ice rink · Indoor courts</dd></div>
+        <div><dt>Tools</dt><dd>Revit · LIRA-SAPR · IDEA StatiCa · AutoCAD</dd></div>
+      </dl>
+
+      <figure class="case-cover">
+        <img src="assets/portfolio/f38fb07da3db29f9.png" alt="Architectural rendering of the sports complex viewed from the entrance plaza" width="1318" height="583">
+        <figcaption>Architectural rendering of the sports complex.</figcaption>
+      </figure>
+
+      <div>
+        <section class="case-band">
+          <h2>One roof over three sports facilities</h2>
+          <div class="body-copy">
+            <p>The pool, ice rink and courts each needed a large clear area. The steel roof uses trusses spanning up to 37 m to meet those clear-span requirements. The framing plan and axonometric view show how the trusses and bracing are arranged across the three areas.</p>
+          </div>
+          <figure class="case-figure">
+            <img src="assets/portfolio/c9e66404b02426b0.png" alt="Axonometric view of the steel roof trusses and columns" loading="lazy">
+            <figcaption>Overall view of the steel roof framing.</figcaption>
+          </figure>
+          <figure class="case-figure">
+            <img src="assets/portfolio/1621f9cb4227a4c1.png" alt="Plan showing steel roof framing and bracing" loading="lazy">
+            <figcaption>Steel roof framing and bracing plan.</figcaption>
+          </figure>
+        </section>
+
+        <section class="case-band">
+          <h2>Reinforced concrete around the ice rink</h2>
+          <div class="body-copy">
+            <p>The rink’s curved perimeter shaped the layout of the reinforced concrete walls. The drawings trace the design from the overall plan and 3D view to reinforcement at curved wall segments, openings and cantilever supports.</p>
+          </div>
+          <figure class="case-figure">
+            <img src="assets/portfolio/35fa214824948298.png" alt="Ice rink structural plan and 3D view" loading="lazy">
+            <figcaption>Overall layout and 3D view of the ice rink.</figcaption>
+          </figure>
+          <figure class="case-figure">
+            <img src="assets/portfolio/0dba8e1d64c47719.png" alt="Perimeter wall reinforcement plan and sections" loading="lazy">
+            <figcaption>Perimeter wall reinforcement plan and sections.</figcaption>
+          </figure>
+          <figure class="case-figure">
+            <img src="assets/portfolio/997ac34823aa633a.png" alt="Reinforcement sections through the curved wall and adjoining elements" loading="lazy">
+            <figcaption>Curved wall reinforcement and junction details.</figcaption>
+          </figure>
+          <figure class="case-figure">
+            <img src="assets/portfolio/b036cabcf64a8003.png" alt="Wall reinforcement elevations and sections showing openings" loading="lazy">
+            <figcaption>Wall reinforcement around openings.</figcaption>
+          </figure>
+          <figure class="case-figure">
+            <img src="assets/portfolio/8a27afd0b2ae9550.png" alt="Concrete cantilever support layout, reinforcement details and schedules" loading="lazy">
+            <figcaption>Reinforced concrete cantilever supports and bar schedules.</figcaption>
+          </figure>
+        </section>
+
+        <section class="case-band">
+          <h2>Progressive collapse assessment and steel connections</h2>
+          <div class="body-copy">
+            <p>The structural analysis in LIRA-SAPR included a progressive collapse assessment. Steel connection design was supported by checks in IDEA StatiCa. The detail sheet shows how beams, bracing and column bases were specified in the structural drawings.</p>
+          </div>
+          <figure class="case-figure">
+            <img src="assets/portfolio/36a8595dbd101cef.png" alt="Steel connection sheet showing beam joints, bracing and column base details" loading="lazy">
+            <figcaption>Steelwork details for beam joints, bracing and column bases.</figcaption>
+          </figure>
+        </section>
+
+        <section class="case-band">
+          <h2>Project outcome</h2>
+          <div class="body-copy">
+            <p>The structural design brought three sports facilities together under one roof. The drawings cover both the overall steel framing and the local details needed to build the steel and reinforced concrete structures.</p>
+          </div>
+          <figure class="case-figure">
+            <img src="assets/portfolio/ad13e255305c2411.webp" alt="Aerial photograph of the completed sports complex" width="1000" height="598" loading="lazy">
+            <figcaption>Aerial view of the completed sports complex.</figcaption>
+          </figure>
+        </section>
+      </div>
+
+      <div class="case-end">
+        <a class="secondary" href="#work">All projects</a>
+      </div>
+    </article>
+  </main>
+
+  <main class="case-page highrise-case" id="highrise" hidden>
+    <article class="frame">
+      <a class="back" href="#work">Back to projects</a>
+      <h1 id="highrise-title" class="case-title" tabindex="-1">25-storey residential complex</h1>
+      <p class="lead">A 25-storey, three-section reinforced concrete residential complex with underground parking, built on challenging ground conditions. The project involved the design of 1,325 CFA piles, ranging from 18 to 27 metres in length, and advanced nonlinear structural analysis to optimise reinforcement and ensure structural performance.</p>
+
+      <dl class="case-facts">
+        <div><dt>Building</dt><dd>25 storeys · Three sections</dd></div>
+        <div><dt>Foundation</dt><dd>1,325 CFA piles</dd></div>
+        <div><dt>Tools</dt><dd>Revit · LIRA-SAPR · Navisworks</dd></div>
+      </dl>
+
+      <figure class="case-cover">
+        <img src="assets/portfolio/dad984669d7b9ce3.jpg" alt="Architectural rendering of the 25-storey residential complex" width="1920" height="960" loading="lazy">
+        <figcaption>Architectural rendering of the residential complex.</figcaption>
+      </figure>
+
+      <div>
+        <section class="case-band">
+          <h2>Structural analysis and excavation design</h2>
+          <div class="body-copy">
+            <p>Weak ground required piled foundations across the footprint of the residential buildings and the underground car park. Excavation was one of the most demanding parts of the design. The retaining system had to be checked at successive construction stages. The building analysis also accounted for wind-induced movement and differential settlement across the three sections.</p>
+            <p>A material nonlinear analysis was carried out in LIRA-SAPR for all three sections to account for the strength and nonlinear response of reinforced concrete. The results identified where extra reinforcement was required and where it could be omitted, reducing unnecessary steel use.</p>
+          </div>
+          <div class="pair">
+            <figure>
+            <img src="assets/portfolio/b7e190633bdc519c.png" alt="" width="377" height="723" loading="lazy">
+            <figcaption>Finite element model of a building section and its pile foundation.</figcaption>
+          </figure>
+            <figure>
+            <img src="assets/portfolio/e9efad04f76d4b3e.png" alt="" width="909" height="753" loading="lazy">
+            <figcaption>LIRA-SAPR analysis model and settings.</figcaption>
+          </figure>
+          </div>
+          <div class="pair">
+            <figure>
+            <img src="assets/portfolio/13142c8fa65e7039.png" alt="" width="321" height="776" loading="lazy">
+            <figcaption>Horizontal displacement results for a building section.</figcaption>
+          </figure>
+            <figure>
+            <img src="assets/portfolio/539b9fc158367e61.png" alt="" width="635" height="793" loading="lazy">
+            <figcaption>Distribution of forces in the foundation piles.</figcaption>
+          </figure>
+          </div>
+          <div class="pair">
+            <figure>
+            <img src="assets/portfolio/fce351118933179e.png" alt="" width="631" height="796" loading="lazy">
+            <figcaption>Horizontal displacement in the X direction under wind loading.</figcaption>
+          </figure>
+            <figure>
+            <img src="assets/portfolio/bfea1afa0792c3d2.png" alt="" width="734" height="791" loading="lazy">
+            <figcaption>Foundation slab reinforcement analysis results.</figcaption>
+          </figure>
+          </div>
+        </section>
+
+        <section class="case-band">
+          <h2>Reinforcement detailing in Revit</h2>
+          <div class="body-copy">
+            <p>The Revit models show how reinforcement fits together at wall pier-to-slab and pile-to-foundation slab junctions, as well as around the crane foundation. Modelling these interfaces in 3D made it possible to check how bars from adjoining elements fit together before completing the drawings.</p>
+          </div>
+          <figure class="case-figure">
+            <img src="assets/portfolio/3722dc3b3aa3dacc.png" alt="" width="764" height="629" loading="lazy">
+            <figcaption>Overall Revit model of the reinforced concrete building and bored piles.</figcaption>
+          </figure>
+          <div class="pair">
+            <figure>
+            <img src="assets/portfolio/64fde706fc87b2e2.png" alt="" width="405" height="758" loading="lazy">
+            <figcaption>Wall pier reinforcement cage.</figcaption>
+          </figure>
+            <figure>
+            <img src="assets/portfolio/6024b60068a96a06.png" alt="" width="671" height="458" loading="lazy">
+            <figcaption>Reinforcement at a wall pier-to-slab junction.</figcaption>
+          </figure>
+          </div>
+          <div class="pair">
+            <figure>
+            <img src="assets/portfolio/2a07ae7c745d445d.png" alt="" width="597" height="720" loading="lazy">
+            <figcaption>Pile reinforcement continuing into the foundation slab.</figcaption>
+          </figure>
+            <figure>
+            <img src="assets/portfolio/0505cd6ad7cfc527.png" alt="" width="749" height="519" loading="lazy">
+            <figcaption>Local reinforcement cage at a pile-to-slab junction.</figcaption>
+          </figure>
+          </div>
+          <div class="pair">
+            <figure>
+            <img src="assets/portfolio/4cb1281b294492e8.png" alt="" width="566" height="601" loading="lazy">
+            <figcaption>Reinforcement at structural interfaces in section.</figcaption>
+          </figure>
+            <figure>
+            <img src="assets/portfolio/7d70e17f48e9b722.png" alt="" width="639" height="652" loading="lazy">
+            <figcaption>Local reinforcement around the crane foundation interface.</figcaption>
+          </figure>
+          </div>
+        </section>
+
+        <section class="case-band">
+          <h2>Construction drawings</h2>
+          <div class="body-copy">
+            <p>The drawing package documented the structural layout, member geometry and reinforcement through plans, elevations, sections, details and bar schedules.</p>
+          </div>
+          <figure class="case-figure">
+            <img src="assets/portfolio/b3688bb1dab2aa42.png" alt="" width="1181" height="565" loading="lazy">
+            <figcaption>Reinforcement elevations and schedules for vertical concrete elements.</figcaption>
+          </figure>
+          <figure class="case-figure">
+            <img src="assets/portfolio/40789efa9cca6f39.png" alt="" width="1039" height="735" loading="lazy">
+            <figcaption>Dimensioned structural plans and associated details.</figcaption>
+          </figure>
+          <figure class="case-figure">
+            <img src="assets/portfolio/9d521e4e5d0caf40.png" alt="" width="1075" height="509" loading="lazy">
+            <figcaption>Structural sections through the reinforced concrete structure.</figcaption>
+          </figure>
+          <figure class="case-figure">
+            <img src="assets/portfolio/83c66c728b868ac7.png" alt="" width="1026" height="726" loading="lazy">
+            <figcaption>Local reinforcement and connection details.</figcaption>
+          </figure>
+        </section>
+
+        <section class="case-band" aria-labelledby="highrise-outcome">
+          <h2 id="highrise-outcome">Project outcome</h2>
+          <dl class="outcome-metrics">
+            <div><dt>Reinforced concrete CFA piles</dt><dd>1,325</dd></div>
+            <div><dt>Design team members</dt><dd>5</dd></div>
+            <div><dt>Design period</dt><dd>7 months</dd></div>
+          </dl>
+          <div class="body-copy">
+            <p>The residential complex has been built. The CFA piles were 650 mm in diameter and ranged from 18 to 27 m in length. They were installed across the footprint of the residential buildings and the underground car park.</p>
+            <p>Over seven months, my five-person team carried out the structural design and prepared the construction drawings. We used a federated model in Navisworks to detect and resolve clashes with other disciplines, coordinating dense building services in the car park and their routes through the residential floors up to the roof.</p>
+          </div>
+        </section>
+      </div>
+
+      <div class="case-end">
+        <a class="secondary" href="#work">All projects</a>
+      </div>
+    </article>
+  </main>
+
+  <main class="case-page quarter-case" id="quarter" hidden>
+    <article class="frame">
+      <a class="back" href="#work">Back to projects</a>
+      <h1 id="quarter-title" class="case-title" tabindex="-1">Residential quarter &amp; underground parking</h1>
+      <p class="lead">A group of cast-in-place reinforced concrete residential buildings above a shared underground car park. The structural design had to address groundwater across the site and accommodate factory-made balconies.</p>
+
+      <dl class="case-facts">
+        <div><dt>Substructure</dt><dd>One shared underground parking level</dd></div>
+        <div><dt>Off-site fabrication</dt><dd>Complete balcony units</dd></div>
+        <div><dt>Tools</dt><dd>Revit · LIRA-SAPR · LIRA Soil · Navisworks</dd></div>
+      </dl>
+
+      <figure class="case-cover">
+        <img src="assets/portfolio/c6e0d70726f8638c.jpg" alt="Architectural rendering of the residential blocks and landscaped grounds" width="1200" height="800" loading="lazy">
+        <figcaption>Architectural rendering of the residential quarter.</figcaption>
+      </figure>
+
+      <div>
+        <section class="case-band">
+          <h2>Groundwater and a shared underground car park</h2>
+          <div class="body-copy">
+            <p>The underground car park extends beneath the residential buildings, making groundwater a site-wide design issue. The planned drainage system collects groundwater across the development and routes it to a pond in the adjacent landscaped park.</p>
+            <p>Weak, waterlogged soils required checks for groundwater uplift, bearing capacity and differential settlement. The structural analysis model captured the interaction between the residential buildings and the car park, and the design addressed waterproofing at complex junctions.</p>
+          </div>
+          <div class="pair settlement-grid" id="settlement-grid">
+            <figure>
+              <button type="button" aria-label="Open full-size image: LIRA-SAPR model of the residential buildings and shared underground car park.">
+                <img src="assets/portfolio/87bce07d0a01b71d.png" alt="" width="1160" height="639" loading="lazy">
+              </button>
+              <figcaption>LIRA-SAPR model of the residential buildings and shared underground car park.</figcaption>
+            </figure>
+            <figure>
+              <button type="button" aria-label="Open full-size image: Calculated settlements for the buildings and car park (mm).">
+                <img src="assets/portfolio/7c47f01736352e5e.png" alt="" width="1202" height="777" loading="lazy">
+              </button>
+              <figcaption>Calculated settlements for the buildings and car park (mm).</figcaption>
+            </figure>
+            <figure>
+              <button type="button" aria-label="Open full-size image: LIRA Soil geotechnical model in plan and section.">
+                <img src="assets/portfolio/a563a7ff87846f6b.png" alt="" width="1027" height="540" loading="lazy">
+              </button>
+              <figcaption>LIRA Soil geotechnical model in plan and section.</figcaption>
+            </figure>
+            <figure>
+              <button type="button" aria-label="Open full-size image: LIRA Soil settlement contour plan.">
+                <img src="assets/portfolio/dc17340d7d0c23f1.png" alt="" width="1015" height="551" loading="lazy">
+              </button>
+              <figcaption>LIRA Soil settlement contour plan.</figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="case-band">
+          <h2>Connections for factory-made balconies</h2>
+          <div class="body-copy">
+            <p>The balconies were manufactured off site as complete units and delivered ready for installation. I developed the connection details that attach the prefabricated units to the cast-in-place concrete frame.</p>
+          </div>
+        </section>
+
+        <section class="case-band">
+          <h2>From the Revit load model to reinforcement design</h2>
+          <div class="body-copy">
+            <p>I built the analytical model and assigned loads in Revit, then exported the model to LIRA-SAPR. I brought the calculated reinforcement requirements back into Revit to guide reinforcement layouts.</p>
+            <p>This workflow made it quicker to incorporate architectural revisions and simpler to update the affected reinforcement layouts as the design evolved.</p>
+          </div>
+          <figure class="case-figure">
+            <img src="assets/portfolio/168341fec2f9a59e.png" alt="" width="1363" height="588" loading="lazy">
+            <figcaption>Revit analytical model with applied loads.</figcaption>
+          </figure>
+          <figure class="case-figure">
+            <img src="assets/portfolio/b9476de1be0d900e.png" alt="" width="1386" height="729" loading="lazy">
+            <figcaption>Revit view filters used to review the load model.</figcaption>
+          </figure>
+          <div class="pair">
+            <figure><img src="assets/portfolio/a4874280750b04b4.png" alt="" width="936" height="787" loading="lazy"><figcaption>Required column reinforcement area for one residential section (cm²).</figcaption></figure>
+            <figure><img src="assets/portfolio/31bb8eb061f346ef.png" alt="" width="807" height="743" loading="lazy"><figcaption>Slab reinforcement requirements from the analysis.</figcaption></figure>
+          </div>
+        </section>
+
+        <section class="case-band">
+          <h2>Multidisciplinary coordination in Navisworks</h2>
+          <div class="body-copy">
+            <p>I coordinated the structural model with architecture and building services in Navisworks, reviewing clashes with the other design teams across the residential blocks and in the shared underground level.</p>
+          </div>
+          <figure class="case-figure">
+            <img src="assets/portfolio/6775e87585cebd75.png" alt="" width="1159" height="576" loading="lazy">
+            <figcaption>Overall Revit structural model of the residential quarter and underground level.</figcaption>
+          </figure>
+        </section>
+
+        <section class="case-band" aria-labelledby="quarter-outcome">
+          <h2 id="quarter-outcome">Construction progress</h2>
+          <div class="body-copy">
+            <p>The construction photographs show the reinforced concrete frames, masonry infill and slab works between the residential blocks.</p>
+          </div>
+          <figure class="case-figure">
+            <img src="assets/portfolio/516fcf0067fd3efe.webp" alt="Concrete frames and partially built masonry walls with slab formwork in the foreground" width="2048" height="1365" loading="lazy">
+            <figcaption>Residential concrete frames and slab formwork during construction.</figcaption>
+          </figure>
+          <figure class="case-figure">
+            <img src="assets/portfolio/411edcb79b857eb3.webp" alt="Construction view across the slab between the residential blocks" width="2048" height="1365" loading="lazy">
+            <figcaption>View between the residential buildings during construction of the shared underground level.</figcaption>
+          </figure>
+        </section>
+      </div>
+
+      <div class="case-end">
+        <a class="secondary" href="#work">All projects</a>
+      </div>
+    </article>
+  </main>
+
+  <main class="case-page seismic-case" id="seismic" hidden>
+    <article class="frame">
+      <a class="back" href="#work">Back to projects</a>
+      <h1 id="seismic-title" class="case-title" tabindex="-1">Residential design in a seismic region</h1>
+      <p class="lead">A reinforced concrete residential development with 9- and 16-storey blocks. The design had to account for seismic intensity VII and the constraints of building far from major urban centres.</p>
+
+      <dl class="case-facts">
+        <div><dt>Building heights</dt><dd>9 and 16 storeys</dd></div>
+        <div><dt>Design seismic intensity</dt><dd>VII</dd></div>
+        <div><dt>Tools</dt><dd>LIRA-SAPR · SCAD · Revit</dd></div>
+      </dl>
+
+      <figure class="case-cover">
+        <img src="assets/portfolio/df01ce5352cc03ba.jpg" alt="Architectural rendering of the residential development from the street" width="2048" height="1152" loading="lazy">
+        <figcaption>Architectural rendering of the residential development.</figcaption>
+      </figure>
+
+      <div>
+        <section class="case-band">
+          <h2>Seismic analysis and pile foundations</h2>
+          <div class="body-copy">
+            <p>The finite element analysis considered seismic action in the relevant directions and assessed the response of the reinforced concrete frame, accounting for centres of mass, natural frequencies and frame flexibility.</p>
+            <p>Weak, waterlogged soils made the foundation design a major part of the project. The buildings were founded on 12 m precast reinforced concrete piles with a 300 × 300 mm cross-section. The pile layout was refined through analysis using a multi-row arrangement. The site’s distance from major cities added constraints to materials supply and construction logistics.</p>
+          </div>
+          <figure class="case-figure">
+            <img src="assets/portfolio/e58c9f4fe8322d20.png" alt="Finite element model of a reinforced concrete residential block and its pile foundations" width="887" height="743" loading="lazy">
+            <figcaption>Structural analysis model showing the reinforced concrete frame and pile foundations.</figcaption>
+          </figure>
+          <figure class="case-figure">
+            <img src="assets/portfolio/72ae0d496e38ac91.png" alt="" width="1489" height="798" loading="lazy">
+            <figcaption>Calculated building displacements under seismic loading.</figcaption>
+          </figure>
+        </section>
+
+        <section class="case-band">
+          <h2>Construction drawings</h2>
+          <div class="body-copy">
+            <p>The construction drawings translated the analysis into reinforcement layouts and structural details. The drawings below cover foundation slab reinforcement, typical floor slab reinforcement and detailed reinforcement at wall junctions and openings.</p>
+          </div>
+          <figure class="case-figure">
+            <img src="assets/portfolio/0f5cbd4a74822415.png" alt="" width="1066" height="770" loading="lazy">
+            <figcaption>Foundation slab reinforcement plan, sections and detailing.</figcaption>
+          </figure>
+          <figure class="case-figure">
+            <img src="assets/portfolio/5a1220641e82be64.png" alt="" width="1267" height="888" loading="lazy">
+            <figcaption>Typical-floor slab reinforcement plan with details around service openings.</figcaption>
+          </figure>
+          <figure class="case-figure">
+            <img src="assets/portfolio/7f9cd9e2336dfa62.png" alt="" width="1279" height="903" loading="lazy">
+            <figcaption>Wall reinforcement sections and junction details, including door, window and service openings.</figcaption>
+          </figure>
+        </section>
+
+        <section class="case-band" aria-labelledby="seismic-outcome">
+          <h2 id="seismic-outcome">Project outcome</h2>
+          <dl class="outcome-metrics">
+            <div><dt>Design seismic intensity</dt><dd>VII</dd></div>
+            <div><dt>Precast reinforced concrete piles</dt><dd>570</dd></div>
+            <div><dt>Increase in reinforcement required due to seismic design</dt><dd>30%</dd></div>
+          </dl>
+          <div class="body-copy">
+            <p>The design documentation passed state expert review, and construction of the residential development was completed.</p>
+          </div>
+          <figure class="case-figure">
+            <img src="assets/portfolio/bf2109de6a10726d.jpg" alt="Architectural rendering of a residential block from the landscaped courtyard" width="2048" height="1152" loading="lazy">
+            <figcaption>Architectural rendering of the landscaped courtyard.</figcaption>
+          </figure>
+          <figure class="case-figure">
+            <img src="assets/portfolio/a8f660ee2492e87d.png" alt="Street photograph of the completed residential buildings" width="789" height="537" loading="lazy">
+            <figcaption>Site photograph of the completed residential blocks.</figcaption>
+          </figure>
+        </section>
+      </div>
+
+      <div class="case-end">
+        <a class="secondary" href="#work">All projects</a>
+      </div>
+    </article>
+  </main>
+
+  <footer class="contact" id="contact">
+    <div class="frame">
+      <div>
+        <h2>Looking for a Structural Engineer?</h2>
+        <p>Let's explore how I can contribute to your next project. <span aria-hidden="true">👋</span></p>
+      </div>
+      <div class="links">
+        <a class="button" href="https://www.linkedin.com/in/dmitriy-ivanov-construct/">Let’s talk on LinkedIn</a>
+        <a class="secondary" href="mailto:dmitriy206418@gmail.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <dialog class="figure-viewer" id="figure-viewer" aria-labelledby="figure-viewer-title">
+    <form method="dialog">
+      <p id="figure-viewer-title"></p>
+      <button type="submit" autofocus>Close</button>
+    </form>
+    <img alt="">
+  </dialog>
+
+  <script>
+    const settlementGrid = document.getElementById('settlement-grid');
+    const figureViewer = document.getElementById('figure-viewer');
+    const viewerTitle = document.getElementById('figure-viewer-title');
+    const viewerImage = figureViewer.querySelector('img');
+
+    settlementGrid.addEventListener('click', event => {
+      const button = event.target.closest('button');
+      if (!button) return;
+      viewerTitle.textContent = button.nextElementSibling.textContent;
+      viewerImage.src = button.querySelector('img').src;
+      figureViewer.showModal();
+      figureViewer.scrollTop = 0;
+      figureViewer.scrollLeft = 0;
+    });
+
+    const home = document.getElementById('home');
+    const casePages = document.querySelectorAll('.case-page');
+    const portfolioTitle = document.title;
+    const buildingType = document.getElementById('building-type');
+    const motionPreference = matchMedia('(prefers-reduced-motion: reduce)');
+    const buildingTypes = [
+      'high-rise buildings', 'warehouses', 'sports complexes',
+      'railway stations', 'residential developments'
+    ];
+    let currentBuilding = 0;
+    let rotationTimer;
+    let transition;
+
+    function updateRotation() {
+      clearInterval(rotationTimer);
+      if (motionPreference.matches || home.hidden || document.hidden) {
+        transition?.cancel();
+        return;
+      }
+      rotationTimer = setInterval(() => {
+        currentBuilding = (currentBuilding + 1) % buildingTypes.length;
+        buildingType.textContent = buildingTypes[currentBuilding];
+        transition = buildingType.animate([{opacity: .35}, {opacity: 1}], {duration: 230});
+      }, 2600);
+    }
+
+    motionPreference.addEventListener('change', updateRotation);
+    document.addEventListener('visibilitychange', updateRotation);
+
+    function showView() {
+      const viewId = location.hash.slice(1);
+      let activeCase;
+      for (const casePage of casePages) {
+        casePage.hidden = casePage.id !== viewId;
+        if (!casePage.hidden) activeCase = casePage;
+      }
+      home.hidden = Boolean(activeCase);
+      updateRotation();
+
+      const heading = activeCase?.querySelector('h1');
+      document.title = heading ? heading.textContent + ' · Dmitriy Ivanov' : portfolioTitle;
+
+      if (heading) {
+        window.scrollTo({top: 0, behavior: 'instant'});
+        heading.focus({preventScroll: true});
+      } else if (['#expertise', '#work', '#contact'].includes(location.hash)) {
+        document.querySelector(location.hash).scrollIntoView();
+      } else if (location.hash === '#home') {
+        window.scrollTo({top: 0, behavior: 'instant'});
+        document.getElementById('home-title').focus({preventScroll: true});
+      }
+    }
+
+    window.addEventListener('hashchange', showView);
+    showView();
+  </script>
+</body>
+</html>
